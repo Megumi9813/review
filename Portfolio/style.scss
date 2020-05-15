@@ -1,0 +1,311 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: "Arial", "Helvetica", "san-serif";
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2e37;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+#top {
+  h1 {
+    font-size: 3rem;
+    line-height: 9vh;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  hr {
+    width: 32%;
+    display: block;
+    border: solid 1px #06c1fc;
+  }
+  .btn-contact {
+    height: 10vh;
+    display: flex;
+    margin-top: 4vh;
+    a {
+      margin: auto;
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 3vh 7vw;
+    }
+  }
+}
+
+#main {
+}
+
+#bottom {
+  .footer-menu {
+    height: 23%;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    display: flex;
+    padding-top: 85vh;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .menu {
+    margin: auto;
+  }
+}
+
+footer {
+  color: white;
+  height: 6vh;
+  display: flex;
+  small {
+    font-size: 1.3rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/////////////////Contact///////////////////
+header {
+  height: 15vh;
+  display: flex;
+  h2 {
+    color: white;
+    line-height: 15vh;
+    font-size: 1.8rem;
+    padding-left: 20vh;
+  }
+}
+
+#lets {
+  height: 60vh;
+  background-color: white;
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  .wrap {
+    margin: auto;
+    .icon {
+      .far {
+        width: 5vw;
+        height: 5vh;
+        display: inline-block;
+        font-weight: 400;
+      }
+    }
+    h1 {
+      width: 100%;
+      height: 5vh;
+      font-size: 1.5rem;
+    }
+    p {
+      width: 40%;
+      height: 10vh;
+      margin: auto;
+      line-height: 1.8rem;
+      color: #8d8d8d;
+      padding-top: 3vh;
+      font-size: 1rem;
+    }
+  }
+}
+
+#contact {
+  height: 100vh;
+  background-color: #f0f2f2;
+  display: flex;
+  flex-direction: column;
+  .wrap-container {
+    height: 50%;
+    width: 60%;
+    margin: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding-bottom: 5vh;
+  }
+  .container {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    height: auto;
+    .padding {
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+      height: 95%;
+      width: 93%;
+      opacity: 0.7;
+      padding-bottom: 2vh;
+      input {
+        border: none;
+        border-bottom: solid 1px rgba(3, 3, 3, 0.4);
+        padding-top: 2rem;
+        font-size: 1rem;
+      }
+      textarea {
+        resize: none;
+        height: 20vh;
+        font-size: 1rem;
+      }
+      .textlines {
+        margin-top: 1rem;
+        padding-left: 0.6rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+.contact-footer {
+  height: 20vh;
+  display: flex;
+  color: white;
+  .contact-menu {
+    height: 23%;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    display: flex;
+    padding-top: 5vh;
+  }
+}
