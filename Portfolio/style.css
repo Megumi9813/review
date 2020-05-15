@@ -358,4 +358,13 @@ header h2 {
   display: flex;
   padding-top: 5vh;
 }
+
+.contact-footer .contact-menu .menu {
+  width: 33.3333333%;
+  text-align: center;
+}
+
+.index-page header {
+  height: 0;
+}
 /*# sourceMappingURL=style.css.map */

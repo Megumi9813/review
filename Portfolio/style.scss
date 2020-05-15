@@ -307,5 +307,16 @@ header {
     bottom: 0;
     display: flex;
     padding-top: 5vh;
+    .menu {
+      width: 33.3333333%;
+      text-align: center;
+    }
+  }
+}
+
+///////////////////////////page_dependent/////////
+.index-page {
+  header {
+    height: 0;
   }
 }
