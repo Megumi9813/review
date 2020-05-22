@@ -171,9 +171,11 @@ body {
 
 #top .center .anime {
   display: block;
-  -webkit-animation: anime1 1.5s ease;
-          animation: anime1 1.5s ease;
+  -webkit-animation: anime1 1s ease;
+          animation: anime1 1s ease;
   position: relative;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #top .center .anime h2 {
@@ -214,6 +216,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4vh;
+  position: relative;
+  -webkit-animation: anime2 1s ease;
+          animation: anime2 1s ease;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 #top .center .btn-contact a {
@@ -223,6 +230,28 @@ body {
   border: 1px solid white;
   border-radius: 5px;
   padding: 3vh 7vw;
+}
+
+@-webkit-keyframes anime2 {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes anime2 {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 .grid {
@@ -295,12 +324,22 @@ body {
   height: 100%;
   -webkit-transform: rotate(-120deg);
           transform: rotate(-120deg);
+  position: relative;
 }
 
 .hexagon__inner-image {
   width: 100%;
   height: 100%;
   background: blue;
+  cursor: pointer;
+}
+
+.hexagon__inner-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hexagon__inner-image_out {

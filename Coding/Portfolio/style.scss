@@ -154,8 +154,9 @@ body {
     }
     .anime {
       display: block;
-      animation: anime1 1.5s ease;
+      animation: anime1 1s ease;
       position: relative;
+      animation-delay: 0.5s;
       h2 {
         font-size: 1.5rem;
       }
@@ -180,6 +181,9 @@ body {
       height: 10vh;
       display: flex;
       margin-top: 4vh;
+      position: relative;
+      animation: anime2 1s ease;
+      animation-delay: 2s;
       a {
         margin: auto;
         color: white;
@@ -187,6 +191,16 @@ body {
         border: 1px solid white;
         border-radius: 5px;
         padding: 3vh 7vw;
+      }
+    }
+    @keyframes anime2 {
+      0% {
+        opacity: 0;
+        top: 30px;
+      }
+      100% {
+        opacity: 1;
+        top: 0;
       }
     }
   }
@@ -248,11 +262,20 @@ body {
   width: 100%;
   height: 100%;
   transform: rotate(-120deg);
+  position: relative;
 }
 .hexagon__inner-image {
   width: 100%;
   height: 100%;
   background: blue;
+  cursor: pointer;
+}
+.hexagon__inner-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .hexagon__inner-image_out {
   width: 100%;
