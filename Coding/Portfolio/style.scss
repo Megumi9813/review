@@ -216,6 +216,11 @@ body {
 .grid__item {
   display: inline-block;
   width: 20%;
+  transition: all 0.3s;
+  &.active {
+    transform: scale(1.5);
+    z-index: 2000;
+  }
 }
 .grid__gutter {
   padding-left: calc((100% / 3) + 20px);
@@ -270,12 +275,18 @@ body {
   background: blue;
   cursor: pointer;
 }
+.hexagon__inner-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 .hexagon__inner-target {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .hexagon__inner-image_out {
   width: 100%;

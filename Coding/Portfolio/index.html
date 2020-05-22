@@ -246,11 +246,13 @@
                 <div class="hexagon__inner-1">
                   <div class="hexagon__inner-2">
                     <div class="hexagon__inner-3">
-                      <div
-                        class="hexagon__inner-image"
-                        style="background: url(imgs/univ_photo.jpeg);"
-                      ></div>
-                      <div class="hexagon__inner-target"></div>
+                      <div class="hexagon__inner-base">
+                        <div
+                          class="hexagon__inner-image"
+                          style="background: url(imgs/univ_photo.jpeg);"
+                        ></div>
+                        <div class="hexagon__inner-target"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -366,13 +368,17 @@
       <small>&copy;megumi.igarashi.com</small>
     </div>
     <script>
-      var $hexagonImages = document.querySelectorAll(".hexagon__inner-image");
-      for (var i = 0; i < $hexagonImages.length; i++) {
-        $hexagonImages[i].addEventListener("mouseover", function (e) {
-          e.target.classList.add("active");
+      var $hexagonTarget = document.querySelectorAll(".hexagon__inner-target");
+      for (var i = 0; i < $hexagonTarget.length; i++) {
+        $hexagonTarget[i].addEventListener("mouseover", function (e) {
+          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add(
+            "active"
+          );
         });
-        $hexagonImages[i].addEventListener("mouseout", function (e) {
-          e.target.classList.remove("active");
+        $hexagonTarget[i].addEventListener("mouseout", function (e) {
+          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove(
+            "active"
+          );
         });
       }
     </script>

@@ -266,6 +266,14 @@ body {
 .grid__item {
   display: inline-block;
   width: 20%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.grid__item.active {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  z-index: 2000;
 }
 
 .grid__gutter {
@@ -334,12 +342,19 @@ body {
   cursor: pointer;
 }
 
+.hexagon__inner-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .hexagon__inner-target {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .hexagon__inner-image_out {
