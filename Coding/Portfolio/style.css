@@ -170,15 +170,10 @@ body {
 }
 
 #top .center .anime {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  text-transform: uppercase;
+  display: block;
+  -webkit-animation: anime1 1.5s ease;
+          animation: anime1 1.5s ease;
+  position: relative;
 }
 
 #top .center .anime h2 {
@@ -189,6 +184,28 @@ body {
   width: 32%;
   display: block;
   border: solid 1px #06c1fc;
+}
+
+@-webkit-keyframes anime1 {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes anime1 {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 #top .center .btn-contact {
@@ -308,7 +325,6 @@ body {
 
 #main .main-background {
   position: relative;
-  z-index: 100;
 }
 
 #main .main-contents {

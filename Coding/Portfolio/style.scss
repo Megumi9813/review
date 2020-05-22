@@ -153,11 +153,9 @@ body {
       line-height: 9vh;
     }
     .anime {
-      animation-name: fadeInUp;
-      animation-duration: 1s;
-      animation-delay: 0.5s;
-      animation-fill-mode: both;
-      text-transform: uppercase;
+      display: block;
+      animation: anime1 1.5s ease;
+      position: relative;
       h2 {
         font-size: 1.5rem;
       }
@@ -167,6 +165,17 @@ body {
         border: solid 1px #06c1fc;
       }
     }
+    @keyframes anime1 {
+      0% {
+        opacity: 0;
+        top: 50px;
+      }
+      100% {
+        opacity: 1;
+        top: 0;
+      }
+    }
+
     .btn-contact {
       height: 10vh;
       display: flex;
@@ -266,7 +275,6 @@ body {
   height: 270vh;
   .main-background {
     position: relative;
-    z-index: 100;
   }
   .main-contents {
     position: absolute;
