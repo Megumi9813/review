@@ -52,7 +52,7 @@
       <div class="center">
         <h1>MEGUMI IGARASHI</h1>
         <div class="anime">
-          <h2>PORTFOLIO</h2>
+          <h2>UNIVERSITY & IMMIGRATION CONSULTING</h2>
           <hr />
         </div>
         <div class="btn-contact">
@@ -224,100 +224,80 @@
             />
           </g>
         </svg>
-      </div>
-      <div class="main-contents">
-        <div class="grid">
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-image_out"></div>
+        <div class="hexagon-contents">
+          <div class="hexagon_relative">
+            <div class="hexagon">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image univ"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-base">
-                        <div
-                          class="hexagon__inner-image"
-                          style="background: url(imgs/univ_photo.jpeg);"
-                        ></div>
-                        <div class="hexagon__inner-target"></div>
-                      </div>
+            <div class="hexagon_japan">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image japan"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-image"></div>
+            <div class="hexagon_canada">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image canada"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-image_out"></div>
+            <div class="hexagon_code">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image code"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-image_out"></div>
+            <div class="hexagon_sport">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image sport"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-image_out"></div>
+            <div class="hexagon_work">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image work"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="grid__gutter">
-              <div class="hexagon">
-                <div class="hexagon__inner-1">
-                  <div class="hexagon__inner-2">
-                    <div class="hexagon__inner-3">
-                      <div class="hexagon__inner-image"></div>
+            <div class="hexagon_phillipine">
+              <div class="hexagon__inner-1">
+                <div class="hexagon__inner-2">
+                  <div class="hexagon__inner-3">
+                    <div class="hexagon_base">
+                      <div class="hexagon__inner-image phillipine"></div>
                     </div>
                   </div>
                 </div>
@@ -368,15 +348,15 @@
       <small>&copy;megumi.igarashi.com</small>
     </div>
     <script>
-      var $hexagonTarget = document.querySelectorAll(".hexagon__inner-target");
-      for (var i = 0; i < $hexagonTarget.length; i++) {
-        $hexagonTarget[i].addEventListener("mouseover", function (e) {
-          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add(
+      var $hexagonImg = document.querySelectorAll(".hexagon_base");
+      for (var i = 0; i < $hexagonImg.length; i++) {
+        $hexagonImg[i].addEventListener("mouseover", function (e) {
+          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add(
             "active"
           );
         });
-        $hexagonTarget[i].addEventListener("mouseout", function (e) {
-          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove(
+        $hexagonImg[i].addEventListener("mouseout", function (e) {
+          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove(
             "active"
           );
         });

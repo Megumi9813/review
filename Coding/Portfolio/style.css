@@ -104,7 +104,6 @@ section {
 
 body {
   line-height: 1;
-  font-family: "Arial", "Helvetica", "san-serif";
 }
 
 ol,
@@ -136,7 +135,7 @@ table {
 }
 
 body {
-  background-color: #2b2e37;
+  background-color: #161a21;
 }
 
 .section {
@@ -148,7 +147,7 @@ body {
 }
 
 #top {
-  height: 60vh;
+  height: 80vh;
 }
 
 #top .header_corner {
@@ -165,25 +164,29 @@ body {
 }
 
 #top .center h1 {
-  font-size: 3rem;
-  line-height: 9vh;
+  font-size: 42px;
+  line-height: 1.2em;
+  letter-spacing: 4px;
+  font-weight: 600;
 }
 
 #top .center .anime {
   display: block;
-  -webkit-animation: anime1 1s ease;
-          animation: anime1 1s ease;
+  -webkit-animation: anime1 1.5s ease;
+          animation: anime1 1.5s ease;
   position: relative;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
 #top .center .anime h2 {
-  font-size: 1.5rem;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 0.6rem;
 }
 
 #top .center .anime hr {
-  width: 32%;
+  width: 15%;
   display: block;
   border: solid 1px #06c1fc;
 }
@@ -191,7 +194,7 @@ body {
 @-webkit-keyframes anime1 {
   0% {
     opacity: 0;
-    top: 50px;
+    top: 30px;
   }
   100% {
     opacity: 1;
@@ -202,7 +205,7 @@ body {
 @keyframes anime1 {
   0% {
     opacity: 0;
-    top: 50px;
+    top: 30px;
   }
   100% {
     opacity: 1;
@@ -215,10 +218,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 4vh;
+  margin-top: 7vh;
   position: relative;
-  -webkit-animation: anime2 1s ease;
-          animation: anime2 1s ease;
+  -webkit-animation: anime2 1.5s ease;
+          animation: anime2 1.5s ease;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
@@ -229,7 +232,13 @@ body {
   text-decoration: none;
   border: 1px solid white;
   border-radius: 5px;
-  padding: 3vh 7vw;
+  padding: 3vh 4vw;
+}
+
+#top .center .btn-contact a:hover {
+  border: 1px solid #06c1fc;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @-webkit-keyframes anime2 {
@@ -254,55 +263,203 @@ body {
   }
 }
 
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: calc((100% * 2 / (4 * 5 + 2 * 4)) * -1 - 20px);
+#main {
+  height: 250vh;
 }
 
-.grid__item {
-  display: inline-block;
-  width: 20%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+#main .main-background {
+  position: relative;
+  top: -8%;
 }
 
-.grid__item.active {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  z-index: 2000;
+#main .main-background .hexagon-contents {
+  position: absolute;
+  top: 34%;
+  width: 100%;
 }
 
-.grid__gutter {
-  padding-left: calc((100% / 3) + 20px);
-}
-
-.grid__item:nth-child(9n + 1) {
-  margin-left: calc((20% - 40px) / 2 + 20px);
-}
-
-.grid__item:nth-child(9n + 5) .hexagon,
-.grid__item:nth-child(9n + 6) .hexagon,
-.grid__item:nth-child(9n + 7) .hexagon,
-.grid__item:nth-child(9n + 8) .hexagon,
-.grid__item:nth-child(9n + 9) .hexagon {
-  margin-top: calc(10px - 43.3012701892%);
-}
-
-.grid__item:nth-child(n + 10) .hexagon {
-  margin-top: calc(10px - 43.3012701892%);
+#main .main-background .hexagon-contents .hexagon_relative {
+  position: relative;
+  width: 100%;
+  height: 80vh;
 }
 
 .hexagon {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 15%;
   overflow: hidden;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+}
+
+.hexagon.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
 }
 
 .hexagon::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+
+.hexagon_japan {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  top: 30%;
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+}
+
+.hexagon_japan.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
+}
+
+.hexagon_japan::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+
+.hexagon_canada {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+  top: 63%;
+}
+
+.hexagon_canada.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
+}
+
+.hexagon_canada::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+
+.hexagon_code {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 38%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+  top: 14%;
+}
+
+.hexagon_code.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
+}
+
+.hexagon_code::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+
+.hexagon_sport {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 38%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+  top: 46%;
+}
+
+.hexagon_sport.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
+}
+
+.hexagon_sport::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+
+.hexagon_work {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 62%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+  top: 14%;
+}
+
+.hexagon_work.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
+}
+
+.hexagon_work::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+
+.hexagon_phillipine {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 62%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transform-origin: 75% 50%;
+          transform-origin: 75% 50%;
+  top: 46%;
+}
+
+.hexagon_phillipine.active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  z-index: 1000;
+}
+
+.hexagon_phillipine::before {
   display: block;
   padding-top: 86.602540378%;
   content: "";
@@ -332,58 +489,45 @@ body {
   height: 100%;
   -webkit-transform: rotate(-120deg);
           transform: rotate(-120deg);
-  position: relative;
+}
+
+.hexagon_base {
+  width: 100%;
+  height: 100%;
 }
 
 .hexagon__inner-image {
   width: 100%;
   height: 100%;
-  background: blue;
   cursor: pointer;
 }
 
-.hexagon__inner-base {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.univ {
+  background: url(imgs/univ_photo.jpeg) center/cover no-repeat;
 }
 
-.hexagon__inner-target {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+.japan {
+  background: url(imgs/Japan_photo.jpeg) center/cover no-repeat;
 }
 
-.hexagon__inner-image_out {
-  width: 100%;
-  height: 100%;
-  background: #2b2e37;
+.canada {
+  background: url(imgs/Photo_canada.jpg) center/cover no-repeat;
 }
 
-.hexagon__inner-image_univ {
-  width: 100%;
-  height: 100%;
+.code {
+  background: url(imgs/coding.jpg) center/cover no-repeat;
 }
 
-.main-contents {
-  width: 100%;
+.sport {
+  background: url(imgs/spot.jpg) center/cover no-repeat;
 }
 
-#main {
-  position: relative;
-  height: 270vh;
+.work {
+  background: url(imgs/Photo_work.jpg) center/cover no-repeat;
 }
 
-#main .main-background {
-  position: relative;
-}
-
-#main .main-contents {
-  position: absolute;
-  top: 25%;
+.phillipine {
+  background: url(imgs/Photo_phillipine.jpg) center/cover no-repeat;
 }
 
 #bottom {

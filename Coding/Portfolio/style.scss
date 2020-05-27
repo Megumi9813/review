@@ -102,7 +102,6 @@ section {
 }
 body {
   line-height: 1;
-  font-family: "Arial", "Helvetica", "san-serif";
 }
 ol,
 ul {
@@ -128,7 +127,7 @@ table {
 }
 
 body {
-  background-color: #2b2e37;
+  background-color: #161a21;
 }
 
 .section {
@@ -138,7 +137,7 @@ body {
 }
 
 #top {
-  height: 60vh;
+  height: 80vh;
   .header_corner {
     position: relative;
   }
@@ -149,19 +148,23 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     h1 {
-      font-size: 3rem;
-      line-height: 9vh;
+      font-size: 42px;
+      line-height: 1.2em;
+      letter-spacing: 4px;
+      font-weight: 600;
     }
     .anime {
       display: block;
-      animation: anime1 1s ease;
+      animation: anime1 1.5s ease;
       position: relative;
       animation-delay: 0.5s;
       h2 {
-        font-size: 1.5rem;
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding: 0.6rem;
       }
       hr {
-        width: 32%;
+        width: 15%;
         display: block;
         border: solid 1px #06c1fc;
       }
@@ -169,20 +172,19 @@ body {
     @keyframes anime1 {
       0% {
         opacity: 0;
-        top: 50px;
+        top: 30px;
       }
       100% {
         opacity: 1;
         top: 0;
       }
     }
-
     .btn-contact {
       height: 10vh;
       display: flex;
-      margin-top: 4vh;
+      margin-top: 7vh;
       position: relative;
-      animation: anime2 1s ease;
+      animation: anime2 1.5s ease;
       animation-delay: 2s;
       a {
         margin: auto;
@@ -190,7 +192,11 @@ body {
         text-decoration: none;
         border: 1px solid white;
         border-radius: 5px;
-        padding: 3vh 7vw;
+        padding: 3vh 4vw;
+        &:hover {
+          border: 1px solid #06c1fc;
+          transition: all 0.5s;
+        }
       }
     }
     @keyframes anime2 {
@@ -206,44 +212,154 @@ body {
   }
 }
 
-////////////////////hexagons//
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc((100% * 2 / (4 * 5 + 2 * 4)) * -1 - 20px);
-}
-.grid__item {
-  display: inline-block;
-  width: 20%;
-  transition: all 0.3s;
-  &.active {
-    transform: scale(1.5);
-    z-index: 2000;
+#main {
+  height: 250vh;
+  .main-background {
+    position: relative;
+    top: -8%;
+    .hexagon-contents {
+      position: absolute;
+      top: 34%;
+      width: 100%;
+      .hexagon_relative {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+      }
+    }
   }
 }
-.grid__gutter {
-  padding-left: calc((100% / 3) + 20px);
-}
-.grid__item:nth-child(9n + 1) {
-  margin-left: calc((20% - 40px) / 2 + 20px);
-}
-.grid__item:nth-child(9n + 5) .hexagon,
-.grid__item:nth-child(9n + 6) .hexagon,
-.grid__item:nth-child(9n + 7) .hexagon,
-.grid__item:nth-child(9n + 8) .hexagon,
-.grid__item:nth-child(9n + 9) .hexagon {
-  margin-top: calc(10px - 43.3012701892%);
-}
-.grid__item:nth-child(n + 10) .hexagon {
-  margin-top: calc(10px - 43.3012701892%);
-}
+
+////////////////////hexagons//////////////
+
 .hexagon {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 15%;
   overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 75% 50%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
 }
 .hexagon::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+.hexagon_japan {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 30%;
+  transform-origin: 75% 50%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
+}
+.hexagon_japan::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+.hexagon_canada {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 75% 50%;
+  top: 63%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
+}
+.hexagon_canada::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+.hexagon_code {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 38%;
+  transform: translate(-50%, 0);
+  transform-origin: 75% 50%;
+  top: 14%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
+}
+.hexagon_code::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+.hexagon_sport {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 38%;
+  transform: translate(-50%, 0);
+  transform-origin: 75% 50%;
+  top: 46%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
+}
+.hexagon_sport::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+.hexagon_work {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 62%;
+  transform: translate(-50%, 0);
+  transform-origin: 75% 50%;
+  top: 14%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
+}
+.hexagon_work::before {
+  display: block;
+  padding-top: 86.602540378%;
+  content: "";
+}
+.hexagon_phillipine {
+  position: absolute;
+  width: 15%;
+  overflow: hidden;
+  left: 62%;
+  transform: translate(-50%, 0);
+  transform-origin: 75% 50%;
+  top: 46%;
+  &.active {
+    transition: all 0.3s;
+    transform: scale(3);
+    z-index: 1000;
+  }
+}
+.hexagon_phillipine::before {
   display: block;
   padding-top: 86.602540378%;
   content: "";
@@ -267,54 +383,38 @@ body {
   width: 100%;
   height: 100%;
   transform: rotate(-120deg);
-  position: relative;
+}
+.hexagon_base {
+  width: 100%;
+  height: 100%;
 }
 .hexagon__inner-image {
   width: 100%;
   height: 100%;
-  background: blue;
   cursor: pointer;
 }
-.hexagon__inner-base {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.univ {
+  background: url(imgs/univ_photo.jpeg) center / cover no-repeat;
 }
-.hexagon__inner-target {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+.japan {
+  background: url(imgs/Japan_photo.jpeg) center / cover no-repeat;
 }
-.hexagon__inner-image_out {
-  width: 100%;
-  height: 100%;
-  background: #2b2e37;
+.canada {
+  background: url(imgs/Photo_canada.jpg) center / cover no-repeat;
 }
-.hexagon__inner-image_univ {
-  width: 100%;
-  height: 100%;
+.code {
+  background: url(imgs/coding.jpg) center / cover no-repeat;
 }
-
+.sport {
+  background: url(imgs/spot.jpg) center / cover no-repeat;
+}
+.work {
+  background: url(imgs/Photo_work.jpg) center / cover no-repeat;
+}
+.phillipine {
+  background: url(imgs/Photo_phillipine.jpg) center / cover no-repeat;
+}
 ///////////////////hexagons-end//////////
-
-.main-contents {
-  width: 100%;
-}
-
-#main {
-  position: relative;
-  height: 270vh;
-  .main-background {
-    position: relative;
-  }
-  .main-contents {
-    position: absolute;
-    top: 25%;
-  }
-}
 
 #bottom {
   position: relative;
