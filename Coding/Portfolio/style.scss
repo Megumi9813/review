@@ -128,7 +128,7 @@ table {
 }
 
 body {
-  background-color: #161a21;
+  background-color: #222;
 }
 
 .section {
@@ -137,17 +137,20 @@ body {
   color: white;
 }
 
-#top {
-  height: 80vh;
-  .header_corner {
-    position: relative;
+.main_background {
+  position: relative;
+  svg {
+    background-size: cover;
   }
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  width: 100%;
   .center {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
     h1 {
       font-size: 42px;
       line-height: 1.2em;
@@ -156,18 +159,21 @@ body {
     }
     .anime {
       display: block;
+      opacity: 0;
       animation: anime1 1.5s ease;
       position: relative;
       animation-delay: 0.5s;
+      animation-fill-mode: forwards;
       h2 {
         font-size: 16px;
         letter-spacing: 2px;
         padding: 0.6rem;
+        color: #a8813f;
       }
       hr {
         width: 15%;
         display: block;
-        border: solid 1px #06c1fc;
+        border: solid 1px #a8813f;
       }
     }
     @keyframes anime1 {
@@ -181,12 +187,14 @@ body {
       }
     }
     .btn-contact {
+      opacity: 0;
       height: 10vh;
       display: flex;
       margin-top: 7vh;
       position: relative;
       animation: anime2 1.5s ease;
-      animation-delay: 2s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
       a {
         margin: auto;
         color: white;
@@ -195,7 +203,7 @@ body {
         border-radius: 5px;
         padding: 3vh 4vw;
         &:hover {
-          border: 1px solid #06c1fc;
+          border: 1px solid #a8813f;
           transition: all 0.5s;
         }
       }
@@ -213,236 +221,73 @@ body {
   }
 }
 
+.content {
+  position: absolute;
+  p {
+    font-weight: bolder;
+    line-height: 1.5rem;
+  }
+}
 #main {
-  height: 250vh;
-  .main-background {
-    position: relative;
-    top: -8%;
-    .hexagon-contents {
-      position: absolute;
-      top: 34%;
-      width: 100%;
-      .hexagon_relative {
-        position: relative;
-        width: 100%;
-        height: 80vh;
+  width: 100%;
+  height: 475vh;
+  position: absolute;
+  top: 21%;
+  .work {
+    left: 54%;
+    top: 8%;
+  }
+  .japan {
+    top: 23%;
+    width: 50%;
+    left: 11%;
+    padding-top: 1rem;
+  }
+  .comment {
+    position: absolute;
+    bottom: 4%;
+    width: 100%;
+    font-size: 2.2rem;
+    color: #a8813f;
+    p {
+      text-align: center;
+      width: 60%;
+      margin: auto;
+      line-height: 2.5rem;
+      a {
+        color: #a8813f;
       }
+    }
+    .comment_name {
+      font-family: "Permanent Marker";
+      position: absolute;
+      left: 68%;
     }
   }
 }
 
-////////////////////hexagons//////////////
-
-.hexagon {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 50%;
-  transform: translate(-50%, 0);
-  transform-origin: 75% 50%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon_japan {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: 30%;
-  transform-origin: 75% 50%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon_japan::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon_canada {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 50%;
-  transform: translate(-50%, 0);
-  transform-origin: 75% 50%;
-  top: 63%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon_canada::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon_code {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 38%;
-  transform: translate(-50%, 0);
-  transform-origin: 75% 50%;
-  top: 14%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon_code::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon_sport {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 38%;
-  transform: translate(-50%, 0);
-  transform-origin: 75% 50%;
-  top: 46%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon_sport::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon_work {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 62%;
-  transform: translate(-50%, 0);
-  transform-origin: 75% 50%;
-  top: 14%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon_work::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon_phillipine {
-  position: absolute;
-  width: 15%;
-  overflow: hidden;
-  left: 62%;
-  transform: translate(-50%, 0);
-  transform-origin: 75% 50%;
-  top: 46%;
-  &.active {
-    transition: all 0.3s;
-    transform: scale(3);
-    z-index: 1000;
-  }
-}
-.hexagon_phillipine::before {
-  display: block;
-  padding-top: 86.602540378%;
-  content: "";
-}
-.hexagon__inner-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transform: rotate(60deg);
-}
-.hexagon__inner-2 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transform: rotate(60deg);
-}
-.hexagon__inner-3 {
-  width: 100%;
-  height: 100%;
-  transform: rotate(-120deg);
-}
-.hexagon_base {
-  width: 100%;
-  height: 100%;
-}
-.hexagon__inner-image {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-.univ {
-  background: url(imgs/univ_photo.jpeg) center / cover no-repeat;
-}
-.japan {
-  background: url(imgs/Japan_photo.jpeg) center / cover no-repeat;
-}
-.canada {
-  background: url(imgs/Photo_canada.jpg) center / cover no-repeat;
-}
-.code {
-  background: url(imgs/coding.jpg) center / cover no-repeat;
-}
-.sport {
-  background: url(imgs/spot.jpg) center / cover no-repeat;
-}
-.work {
-  background: url(imgs/Photo_work.jpg) center / cover no-repeat;
-}
-.phillipine {
-  background: url(imgs/Photo_phillipine.jpg) center / cover no-repeat;
-}
-///////////////////hexagons-end//////////
-
 #bottom {
-  position: relative;
-  color: white;
-  .footer_background {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  .fas {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 9vh;
-    font-size: 3rem;
-  }
-  small {
-    position: absolute;
-    font-size: 1rem;
-    bottom: 0;
-    padding-bottom: 2vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 100%;
+  color: #a8813f;
+  position: absolute;
+  bottom: 0;
+  .bottom_container {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: #a8813f;
+    }
+    .fas {
+      margin-bottom: 9vh;
+      font-size: 3rem;
+    }
+    small {
+      font-size: 1rem;
+      padding-bottom: 5vh;
+    }
   }
 }
 
@@ -554,10 +399,3 @@ header {
 }
 
 /////////////////contact_end//////////////
-
-///////////////////////////page_dependent/////////
-.index-page {
-  header {
-    height: 0;
-  }
-}
