@@ -128,29 +128,23 @@ table {
 }
 
 body {
-  background-color: #222;
+  background-color: #ffffff;
 }
 
-.section {
-  height: 100vh;
-  display: flex;
-  color: white;
+.background {
+  background: url(imgs/hexagon_main.png);
 }
 
-.main_background {
-  position: relative;
-  svg {
-    background-size: cover;
-  }
+.center {
+  margin: auto;
+  text-align: center;
 }
 
-#top {
-  position: absolute;
+.top {
   top: 0;
   width: 100%;
-  .center {
-    text-align: center;
-    margin: auto;
+  height: 100vh;
+  .title {
     h1 {
       font-size: 42px;
       line-height: 1.2em;
