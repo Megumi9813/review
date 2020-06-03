@@ -147,8 +147,10 @@ body {
 
 .top {
   width: 100%;
-  height: 100vh;
   background: url(imgs/hexagon_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -250vw;
 }
 
 .top .title h1 {
