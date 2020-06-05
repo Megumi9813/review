@@ -273,13 +273,11 @@ body {
   width: 100%;
 }
 
-.main .flex__item__img {
-  background: url(imgs/Photo_work.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.main section {
+  height: 70vh;
 }
 
-.main .flex__item {
+.main section .flex__item {
   background-color: white;
   width: 50%;
   color: #222;
@@ -298,35 +296,40 @@ body {
           flex-direction: column;
 }
 
-.main .flex__item .info_container {
+.main section .flex__item .flex__item__img {
+  background: url(imgs/Photo_work.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+
+.main section .flex__item .info_container {
   margin: 0 auto;
   width: 80%;
 }
 
-.main .flex__item .info_container .info_title {
+.main section .flex__item .info_container .info_title {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bolder;
   color: #a8813f;
 }
 
-.main .flex__item .info_container .info_sub {
+.main section .flex__item .info_container .info_sub {
   width: 100%;
   font-weight: bolder;
   font-size: 2rem;
   padding-top: 30px;
 }
 
-.main .flex__item .info_container p {
+.main section .flex__item .info_container p {
   width: 100%;
   color: #acacac;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-top: 30px;
-}
-
-section {
-  height: 100vh;
-  padding: 10vh 0 10vw 0;
+  line-height: 1.4rem;
 }
 
 .flex {
