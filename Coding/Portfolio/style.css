@@ -140,17 +140,26 @@ body {
   color: #fff;
 }
 
-.center {
-  margin: auto;
-  text-align: center;
-}
-
 .top {
   width: 100%;
+  height: 100vh;
   background: url(imgs/hexagon_main.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -250vw;
+  background-position-y: -262vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .title {
+  text-align: center;
 }
 
 .top .title h1 {
@@ -160,7 +169,7 @@ body {
   font-weight: 600;
 }
 
-.top .title .anime {
+.top .title .sub_title {
   display: block;
   opacity: 0;
   -webkit-animation: anime1 1.5s ease;
@@ -172,14 +181,14 @@ body {
           animation-fill-mode: forwards;
 }
 
-.top .title .anime h2 {
+.top .title .sub_title h2 {
   font-size: 16px;
   letter-spacing: 2px;
   padding: 0.6rem;
   color: #a8813f;
 }
 
-.top .title .anime hr {
+.top .title .sub_title hr {
   width: 15%;
   display: block;
   border: solid 1px #a8813f;
@@ -260,69 +269,96 @@ body {
   }
 }
 
-.content {
-  position: absolute;
-}
-
-.content p {
-  font-weight: bolder;
-  line-height: 1.5rem;
-}
-
-#main {
+.main {
   width: 100%;
-  height: 475vh;
-  position: absolute;
-  top: 21%;
 }
 
-#main .work {
-  left: 54%;
-  top: 8%;
-}
-
-#main .japan {
-  top: 23%;
+.main img {
   width: 50%;
-  left: 11%;
-  padding-top: 1rem;
 }
 
-#main .comment {
-  position: absolute;
-  bottom: 4%;
+.main .info {
+  background-color: white;
+  width: 50%;
+  color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .info .info_container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main .info .info_container .info_title {
   width: 100%;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
   color: #a8813f;
 }
 
-#main .comment p {
-  text-align: center;
-  width: 60%;
+.main .info .info_container .info_sub {
+  width: 100%;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding-top: 30px;
+}
+
+.main .info .info_container p {
+  width: 100%;
+  color: #acacac;
+  font-size: 1rem;
+  padding-top: 30px;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10vh 0 10vw 0;
+}
+
+.bottom {
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bottom .message {
+  font-size: 2rem;
+  width: 70%;
   margin: auto;
-  line-height: 2.5rem;
-}
-
-#main .comment p a {
   color: #a8813f;
 }
 
-#main .comment .comment_name {
-  font-family: "Permanent Marker";
-  position: absolute;
-  left: 68%;
+.bottom .message p {
+  line-height: 2.2rem;
 }
 
-#bottom {
+.bottom .message p a {
+  color: #a8813f;
+}
+
+footer {
   width: 100%;
   color: #a8813f;
-  position: absolute;
-  bottom: 0;
 }
 
-#bottom .bottom_container {
-  text-align: center;
-  margin: auto;
+footer .footer_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,19 +366,25 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#bottom .bottom_container a {
+footer .footer_container a {
   text-decoration: none;
   color: #a8813f;
 }
 
-#bottom .bottom_container .fas {
+footer .footer_container .fas {
   margin-bottom: 9vh;
   font-size: 3rem;
 }
 
-#bottom .bottom_container small {
+footer .footer_container small {
   font-size: 1rem;
   padding-bottom: 5vh;
 }
