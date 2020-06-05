@@ -273,8 +273,9 @@ body {
   width: 100%;
 }
 
-.main img {
-  width: 50%;
+.main .img {
+  background: url(imgs/Photo_work.jpg);
+  background-size: cover;
 }
 
 .main .info {

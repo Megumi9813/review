@@ -216,8 +216,9 @@ body {
 
 .main {
   width: 100%;
-  img {
-    width: 50%;
+  .img {
+    background: url(imgs/Photo_work.jpg);
+    background-size: cover;
   }
   .info {
     background-color: white;
