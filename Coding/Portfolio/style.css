@@ -273,12 +273,12 @@ body {
   width: 100%;
 }
 
-.main .img {
+.main .flex__item__img {
   background: url(imgs/Photo_work.jpg);
   background-size: cover;
 }
 
-.main .info {
+.main .flex__item {
   background-color: white;
   width: 50%;
   color: #222;
@@ -297,26 +297,26 @@ body {
           flex-direction: column;
 }
 
-.main .info .info_container {
+.main .flex__item .info_container {
   margin: 0 auto;
   width: 80%;
 }
 
-.main .info .info_container .info_title {
+.main .flex__item .info_container .info_title {
   width: 100%;
   font-size: 1.2rem;
   font-weight: bolder;
   color: #a8813f;
 }
 
-.main .info .info_container .info_sub {
+.main .flex__item .info_container .info_sub {
   width: 100%;
   font-weight: bolder;
   font-size: 2rem;
   padding-top: 30px;
 }
 
-.main .info .info_container p {
+.main .flex__item .info_container p {
   width: 100%;
   color: #acacac;
   font-size: 1rem;
@@ -325,10 +325,13 @@ body {
 
 section {
   height: 100vh;
+  padding: 10vh 0 10vw 0;
+}
+
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10vh 0 10vw 0;
 }
 
 .bottom {

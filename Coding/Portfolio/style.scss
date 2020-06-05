@@ -216,11 +216,11 @@ body {
 
 .main {
   width: 100%;
-  .img {
+  .flex__item__img {
     background: url(imgs/Photo_work.jpg);
     background-size: cover;
   }
-  .info {
+  .flex__item {
     background-color: white;
     width: 50%;
     color: #222;
@@ -255,8 +255,11 @@ body {
 
 section {
   height: 100vh;
-  display: flex;
   padding: 10vh 0 10vw 0;
+}
+
+.flex {
+  display: flex;
 }
 
 .bottom {
