@@ -132,21 +132,21 @@ table {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body {
   background-color: #222;
   color: #fff;
+  font-family: serif;
 }
 
 .top {
   width: 100%;
   height: 100vh;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -290vw;
+  background-position-y: -125vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,7 +174,6 @@ body {
   opacity: 0;
   -webkit-animation: anime1 1.5s ease;
           animation: anime1 1.5s ease;
-  position: relative;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -186,12 +185,6 @@ body {
   letter-spacing: 2px;
   padding: 0.6rem;
   color: #a8813f;
-}
-
-.top .title .sub_title hr {
-  width: 15%;
-  display: block;
-  border: solid 1px #a8813f;
 }
 
 @-webkit-keyframes anime1 {
@@ -216,35 +209,17 @@ body {
   }
 }
 
-.top .title .btn-contact {
+.top .title hr {
+  width: 15%;
+  display: block;
   opacity: 0;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 7vh;
-  position: relative;
+  border: solid 1px #a8813f;
   -webkit-animation: anime2 1.5s ease;
           animation: anime2 1.5s ease;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-.top .title .btn-contact a {
-  margin: auto;
-  color: white;
-  text-decoration: none;
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 3vh 4vw;
-}
-
-.top .title .btn-contact a:hover {
-  border: 1px solid #a8813f;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 @-webkit-keyframes anime2 {
@@ -269,12 +244,64 @@ body {
   }
 }
 
+.top .title .btn-contact {
+  opacity: 0;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 7vh;
+  -webkit-animation: anime3 1.5s ease;
+          animation: anime3 1.5s ease;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.top .title .btn-contact a {
+  margin: auto;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 3vh 4vw;
+}
+
+.top .title .btn-contact a:hover {
+  border: 1px solid #a8813f;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@-webkit-keyframes anime3 {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes anime3 {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 .main {
   width: 100%;
   height: auto;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 31vw 0 31vw 0;
   margin: -31vw 0 -31vw 0;
   display: -webkit-box;
@@ -283,7 +310,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-position: center center;
+  background-position: right 2% top 0;
 }
 
 .main .section_container section {
@@ -381,10 +408,10 @@ body {
 .bottom {
   width: 100%;
   height: 100vh;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 30vw;
+  background-position-y: 40vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -398,6 +425,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .bottom .message {
@@ -408,19 +436,22 @@ body {
 }
 
 .bottom .message p {
-  line-height: 2.2rem;
+  line-height: 1.6em;
 }
 
 .bottom .message p a {
   color: #a8813f;
 }
 
-.bottom footer {
-  width: 100%;
-  color: #a8813f;
+.bottom .message .name {
+  text-align: right;
 }
 
-.bottom footer .footer_container {
+.bottom .message footer {
+  width: 100%;
+  color: #a8813f;
+  bottom: 0;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,19 +465,23 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.bottom footer .footer_container a {
+.bottom .message footer a {
   text-decoration: none;
   color: #a8813f;
 }
 
-.bottom footer .footer_container .fas {
+.bottom .message footer .fas {
   margin-bottom: 9vh;
   font-size: 3rem;
 }
 
-.bottom footer .footer_container small {
+.bottom .message footer small {
   font-size: 1rem;
   padding-bottom: 5vh;
 }
@@ -456,10 +491,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -290vw;
+  background-position: left -1vw bottom -20vh;
 }
 
 header .name {
@@ -528,8 +563,50 @@ header .name a:hover::after {
 }
 
 #contact {
-  height: 100vh;
+  height: 80vh;
   background-color: #f0f2f2;
+  color: black;
+  width: 100%;
+}
+
+#contact .contBox {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+#contact .contBox .imgFace {
+  margin-right: 5vw;
+}
+
+#contact .contBox .imgFace .far {
+  font-size: 10em;
+}
+
+#contact .contBox .address {
+  width: 35%;
+}
+
+#contact .contBox .address .margin {
+  margin: 1.5vh;
+}
+
+#contact .contBox .address dt {
+  width: 32%;
+  float: left;
+}
+
+#contact .contBox .address dt::after {
+  content: ":";
 }
 
 #contact-bottom {
@@ -539,7 +616,7 @@ header .name a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -10vw;
@@ -570,7 +647,7 @@ header .name a:hover::after {
   padding-bottom: 5vh;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -620,7 +697,7 @@ header .name a:hover::after {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

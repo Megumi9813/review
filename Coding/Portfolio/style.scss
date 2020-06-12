@@ -124,21 +124,21 @@ table {
 }
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body {
   background-color: #222;
   color: #fff;
+  font-family: serif;
 }
 
 .top {
   width: 100%;
   height: 100vh;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -290vw;
+  background-position-y: -125vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +154,6 @@ body {
       display: block;
       opacity: 0;
       animation: anime1 1.5s ease;
-      position: relative;
       animation-delay: 0.5s;
       animation-fill-mode: forwards;
       h2 {
@@ -163,13 +162,27 @@ body {
         padding: 0.6rem;
         color: #a8813f;
       }
-      hr {
-        width: 15%;
-        display: block;
-        border: solid 1px #a8813f;
-      }
     }
     @keyframes anime1 {
+      0% {
+        opacity: 0;
+        top: 30px;
+      }
+      100% {
+        opacity: 1;
+        top: 0;
+      }
+    }
+    hr {
+      width: 15%;
+      display: block;
+      opacity: 0;
+      border: solid 1px #a8813f;
+      animation: anime2 1.5s ease;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes anime2 {
       0% {
         opacity: 0;
         top: 30px;
@@ -184,9 +197,8 @@ body {
       height: 10vh;
       display: flex;
       margin-top: 7vh;
-      position: relative;
-      animation: anime2 1.5s ease;
-      animation-delay: 1s;
+      animation: anime3 1.5s ease;
+      animation-delay: 1.5s;
       animation-fill-mode: forwards;
       a {
         margin: auto;
@@ -201,7 +213,7 @@ body {
         }
       }
     }
-    @keyframes anime2 {
+    @keyframes anime3 {
       0% {
         opacity: 0;
         top: 30px;
@@ -217,14 +229,14 @@ body {
 .main {
   width: 100%;
   height: auto;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 31vw 0 31vw 0;
   margin: -31vw 0 -31vw 0;
   display: flex;
   align-items: center;
-  background-position: center center;
+  background-position: right 2% top 0;
   .section_container {
     section {
       height: 70vh;
@@ -292,34 +304,41 @@ body {
 .bottom {
   width: 100%;
   height: 100vh;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 30vw;
+  background-position-y: 40vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   display: flex;
+  position: relative;
   .message {
     font-size: 2rem;
     width: 70%;
     margin: auto;
     color: #a8813f;
     p {
-      line-height: 2.2rem;
+      line-height: 1.6em;
       a {
         color: #a8813f;
       }
     }
-  }
-  footer {
-    width: 100%;
-    color: #a8813f;
-    .footer_container {
+    .name {
+      text-align: right;
+    }
+    footer {
+      width: 100%;
+      color: #a8813f;
+      bottom: 0;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
       a {
         text-decoration: none;
         color: #a8813f;
@@ -340,10 +359,10 @@ body {
 header {
   height: 20vh;
   display: flex;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -290vw;
+  background-position: left -1vw bottom -20vh;
   .name {
     line-height: 20vh;
     font-size: 1.8rem;
@@ -401,8 +420,37 @@ header {
 }
 
 #contact {
-  height: 100vh;
+  height: 80vh;
   background-color: #f0f2f2;
+  color: black;
+  width: 100%;
+  .contBox {
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    width: 80%;
+    .imgFace {
+      margin-right: 5vw;
+      .far {
+        font-size: 10em;
+      }
+    }
+    .address {
+      width: 35%;
+      .margin {
+        margin: 1.5vh;
+      }
+      dt {
+        width: 32%;
+        float: left;
+      }
+      dt::after {
+        content: ":";
+      }
+    }
+  }
 }
 
 #contact-bottom {
@@ -410,7 +458,7 @@ header {
   height: 25vh;
   color: #a8813f;
   display: flex;
-  background: url(imgs/hexagon_main_back.png);
+  background: url(imgs/main_back.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -10vw;
@@ -433,7 +481,7 @@ header {
 
 /////////////////contact_end//////////////
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   .flex {
     flex-direction: column;
   }
@@ -484,7 +532,7 @@ header {
 }
 /////////////////contact_media/////////////
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   header {
     justify-content: center;
     align-items: center;
