@@ -145,8 +145,7 @@ body {
   height: 100vh;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -125vw;
+  background-position: left 2% bottom -17%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,7 +300,6 @@ body {
   height: auto;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
   padding: 31vw 0 31vw 0;
   margin: -31vw 0 -31vw 0;
   display: -webkit-box;
@@ -410,8 +408,7 @@ body {
   height: 100vh;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 40vw;
+  background-position: right top;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -466,9 +463,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 0;
 }
 
 .bottom .message footer a {
