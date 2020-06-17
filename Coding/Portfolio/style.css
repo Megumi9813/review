@@ -145,7 +145,7 @@ body {
   height: 100vh;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-position: left 2% bottom -17%;
+  background-position: left 2% bottom -21%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,6 +177,7 @@ body {
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  position: relative;
 }
 
 .top .title .sub_title h2 {
@@ -219,6 +220,7 @@ body {
           animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  position: relative;
 }
 
 @-webkit-keyframes anime2 {
@@ -256,6 +258,7 @@ body {
           animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  position: relative;
 }
 
 .top .title .btn-contact a {
@@ -308,7 +311,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-position: right 2% top 0;
+  background-position: right 5% top 0;
 }
 
 .main .section_container section {
@@ -375,32 +378,20 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 3vw 5vw 3vw 5vw;
-  -webkit-animation: flex_anime 0.5s ease;
-          animation: flex_anime 0.5s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes flex_anime {
-  0% {
-    opacity: 0;
-    top: 30px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
+.fadeIn {
+  opacity: 0;
+  -webkit-transform: translate(0, 200px);
+          transform: translate(0, 200px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-@keyframes flex_anime {
-  0% {
-    opacity: 0;
-    top: 30px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
+.fadeIn.scrollIn {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .bottom {
@@ -408,7 +399,7 @@ body {
   height: 100vh;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right 2% top -20%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -488,8 +479,7 @@ header {
   display: flex;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left -1vw bottom -20vh;
+  background-position: left 2% bottom 7%;
 }
 
 header .name {
@@ -576,11 +566,12 @@ header .name a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  max-width: 600px;
 }
 
 #contact .contBox .imgFace {
   margin-right: 5vw;
+  text-align: center;
 }
 
 #contact .contBox .imgFace .far {
@@ -588,7 +579,7 @@ header .name a:hover::after {
 }
 
 #contact .contBox .address {
-  width: 35%;
+  min-width: 350px;
 }
 
 #contact .contBox .address .margin {
@@ -598,6 +589,7 @@ header .name a:hover::after {
 #contact .contBox .address dt {
   width: 32%;
   float: left;
+  margin-right: 30px;
 }
 
 #contact .contBox .address dt::after {
@@ -613,8 +605,7 @@ header .name a:hover::after {
   display: flex;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -10vw;
+  background-position: right 2% top 7%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -642,7 +633,7 @@ header .name a:hover::after {
   padding-bottom: 5vh;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 680px) {
   .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -692,7 +683,7 @@ header .name a:hover::after {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 680px) {
   header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -721,6 +712,18 @@ header .name a:hover::after {
   #lets .wrap p {
     width: 70%;
     line-height: 1.5rem;
+  }
+  #contact .contBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .contBox .imgFace {
+    margin: 0;
+  }
+  #contact .contBox .address {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

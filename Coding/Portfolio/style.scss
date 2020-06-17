@@ -137,7 +137,7 @@ body {
   height: 100vh;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-position: left 2% bottom -17%;
+  background-position: left 2% bottom -21%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,6 +155,7 @@ body {
       animation: anime1 1.5s ease;
       animation-delay: 0.5s;
       animation-fill-mode: forwards;
+      position: relative;
       h2 {
         font-size: 16px;
         letter-spacing: 2px;
@@ -180,6 +181,7 @@ body {
       animation: anime2 1.5s ease;
       animation-delay: 1s;
       animation-fill-mode: forwards;
+      position: relative;
     }
     @keyframes anime2 {
       0% {
@@ -199,6 +201,7 @@ body {
       animation: anime3 1.5s ease;
       animation-delay: 1.5s;
       animation-fill-mode: forwards;
+      position: relative;
       a {
         margin: auto;
         color: white;
@@ -234,7 +237,7 @@ body {
   margin: -31vw 0 -31vw 0;
   display: flex;
   align-items: center;
-  background-position: right 2% top 0;
+  background-position: right 5% top 0;
   .section_container {
     section {
       height: 70vh;
@@ -285,18 +288,17 @@ body {
 .flex {
   display: flex;
   padding: 3vw 5vw 3vw 5vw;
-  animation: flex_anime 0.5s ease;
-  animation-fill-mode: forwards;
 }
-@keyframes flex_anime {
-  0% {
-    opacity: 0;
-    top: 30px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
+
+.fadeIn {
+  opacity: 0;
+  transform: translate(0, 200px);
+  transition: all 0.5s;
+}
+
+.fadeIn.scrollIn {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .bottom {
@@ -304,7 +306,7 @@ body {
   height: 100vh;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right 2% top -20%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -357,8 +359,7 @@ header {
   display: flex;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left -1vw bottom -20vh;
+  background-position: left 2% bottom 7%;
   .name {
     line-height: 20vh;
     font-size: 1.8rem;
@@ -426,21 +427,23 @@ header {
     height: 80vh;
     margin: auto;
     display: flex;
-    width: 80%;
+    max-width: 600px;
     .imgFace {
       margin-right: 5vw;
+      text-align: center;
       .far {
         font-size: 10em;
       }
     }
     .address {
-      width: 35%;
+      min-width: 350px;
       .margin {
         margin: 1.5vh;
       }
       dt {
         width: 32%;
         float: left;
+        margin-right: 30px;
       }
       dt::after {
         content: ":";
@@ -456,8 +459,7 @@ header {
   display: flex;
   background: url(imgs/main_back.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -10vw;
+  background-position: right 2% top 7%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -477,7 +479,7 @@ header {
 
 /////////////////contact_end//////////////
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 680px) {
   .flex {
     flex-direction: column;
   }
@@ -528,7 +530,7 @@ header {
 }
 /////////////////contact_media/////////////
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 680px) {
   header {
     justify-content: center;
     align-items: center;
@@ -549,6 +551,17 @@ header {
       p {
         width: 70%;
         line-height: 1.5rem;
+      }
+    }
+  }
+  #contact {
+    .contBox {
+      flex-direction: column;
+      .imgFace {
+        margin: 0;
+      }
+      .address {
+        width: 50%;
       }
     }
   }

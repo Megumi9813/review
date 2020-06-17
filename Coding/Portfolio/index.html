@@ -12,6 +12,11 @@
       src="https://kit.fontawesome.com/610087f644.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <title>Portfolio_Megumi</title>
   </head>
   <body class="index-page">
@@ -29,7 +34,7 @@
     </div>
     <div class="main">
       <div class="section_container">
-        <section class="flex reverse">
+        <section class="flex reverse fadeIn">
           <div class="flex__item">
             <div class="info_container">
               <div class="info_title">WORK</div>
@@ -45,7 +50,7 @@
           </div>
           <div class="flex__item"><div class="flex__item__img"></div></div>
         </section>
-        <section class="flex">
+        <section class="flex fadeIn">
           <div class="flex__item">
             <div
               class="flex__item__img"
@@ -67,7 +72,7 @@
             </div>
           </div>
         </section>
-        <section class="flex reverse">
+        <section class="flex reverse fadeIn">
           <div class="flex__item">
             <div class="info_container">
               <div class="info_title">Philippines</div>
@@ -90,7 +95,7 @@
             ></div>
           </div>
         </section>
-        <section class="flex">
+        <section class="flex fadeIn">
           <div class="flex__item">
             <div
               class="flex__item__img"
@@ -112,7 +117,7 @@
             </div>
           </div>
         </section>
-        <section class="flex reverse">
+        <section class="flex reverse fadeIn">
           <div class="flex__item">
             <div class="info_container">
               <div class="info_title">Canada</div>
@@ -134,7 +139,7 @@
             ></div>
           </div>
         </section>
-        <section class="flex">
+        <section class="flex fadeIn">
           <div class="flex__item">
             <div
               class="flex__item__img"
@@ -176,19 +181,18 @@
       </div>
     </div>
     <script>
-      var $hexagonImg = document.querySelectorAll(".hexagon_base");
-      for (var i = 0; i < $hexagonImg.length; i++) {
-        $hexagonImg[i].addEventListener("mouseover", function (e) {
-          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add(
-            "active"
-          );
+      $(function () {
+        $(window).scroll(function () {
+          $(".fadeIn").each(function () {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 200) {
+              $(this).addClass("scrollIn");
+            }
+          });
         });
-        $hexagonImg[i].addEventListener("mouseout", function (e) {
-          e.target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove(
-            "active"
-          );
-        });
-      }
+      });
     </script>
   </body>
 </html>
