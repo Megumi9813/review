@@ -463,8 +463,12 @@ body {
 }
 
 .bottom .message footer .fas {
-  margin-bottom: 9vh;
+  margin-bottom: 4vh;
   font-size: 3rem;
+}
+
+.bottom .message footer .icon {
+  margin-bottom: 3vh;
 }
 
 .bottom .message footer small {
@@ -567,33 +571,6 @@ header .name a:hover::after {
   display: -ms-flexbox;
   display: flex;
   max-width: 600px;
-}
-
-#contact .contBox .imgFace {
-  margin-right: 5vw;
-  text-align: center;
-}
-
-#contact .contBox .imgFace .far {
-  font-size: 10em;
-}
-
-#contact .contBox .address {
-  min-width: 350px;
-}
-
-#contact .contBox .address .margin {
-  margin: 1.5vh;
-}
-
-#contact .contBox .address dt {
-  width: 32%;
-  float: left;
-  margin-right: 30px;
-}
-
-#contact .contBox .address dt::after {
-  content: ":";
 }
 
 #contact-bottom {

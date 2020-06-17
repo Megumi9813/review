@@ -342,8 +342,11 @@ body {
         color: #a8813f;
       }
       .fas {
-        margin-bottom: 9vh;
+        margin-bottom: 4vh;
         font-size: 3rem;
+      }
+      .icon {
+        margin-bottom: 3vh;
       }
       small {
         font-size: 1rem;
@@ -428,27 +431,6 @@ header {
     margin: auto;
     display: flex;
     max-width: 600px;
-    .imgFace {
-      margin-right: 5vw;
-      text-align: center;
-      .far {
-        font-size: 10em;
-      }
-    }
-    .address {
-      min-width: 350px;
-      .margin {
-        margin: 1.5vh;
-      }
-      dt {
-        width: 32%;
-        float: left;
-        margin-right: 30px;
-      }
-      dt::after {
-        content: ":";
-      }
-    }
   }
 }
 
